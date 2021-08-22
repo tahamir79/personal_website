@@ -14,7 +14,10 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to my personal website
-        <h1>
+        </h1>
+        <h3>
+          My Name is Taha
+        </h3>
         
       </main>
 
