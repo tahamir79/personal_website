@@ -1,0 +1,81 @@
+/* Navbar.module.css */
+
+.navbar {
+  background-color: white; /* White background */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+  padding: 1rem 0; /* Padding to give some space */
+}
+
+.navContainer {
+  max-width: 1200px; /* Adjust this value as needed */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem; /* Padding to match overall site padding */
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.navItem {
+  margin: 0 1rem;
+}
+
+.navItem a {
+  color: black; /* Black text */
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Nice font */
+}
+
+.navItem a:hover {
+  text-decoration: underline;
+}
+
+.hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  color: black; /* Black text for hamburger */
+  display: none; /* Initially hidden, will be shown on smaller screens */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navList {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust this according to the height of your navbar */
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 1rem 0;
+  }
+
+  .navList.show {
+    display: flex;
+  }
+
+  .navItem {
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .navItem a {
+    font-size: 1.5rem;
+  }
+}
